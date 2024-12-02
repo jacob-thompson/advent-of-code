@@ -1,27 +1,3 @@
- Day 1 - Advent of Code 2024    window.addEventListener('click', function(e,s,r){if(e.target.nodeName==='CODE'&&e.detail===3){s=window.getSelection();s.removeAllRanges();r=document.createRange();r.selectNodeContents(e.target);s.addRange(r);}});
-
-[Advent of Code](/)
-===================
-
-*   [\[About\]](/2024/about)
-*   [\[Events\]](/2024/events)
-*   [\[Shop\]](https://cottonbureau.com/people/advent-of-code)
-*   [\[Settings\]](/2024/settings)
-*   [\[Log Out\]](/2024/auth/logout)
-
-       y([2024](/2024))
-=======================
-
-*   [\[Calendar\]](/2024)
-*   [\[AoC++\]](/2024/support)
-*   [\[Sponsors\]](/2024/sponsors)
-*   [\[Leaderboard\]](/2024/leaderboard)
-*   [\[Stats\]](/2024/stats)
-
-Our [sponsors](/2024/sponsors) help make Advent of Code possible:
-
-[Lightricks](/2024/sponsors/redirect?url=https%3A%2F%2Fwww%2Elightricks%2Ecom%2Fltxv) - Are you nerdy but also creative? Do you love AI, but truly believe the human hand doesn’t have six fingers? If you answered yes and want to help the future of creation, we’re hiring software engineers, developers, and more.
-
 \--- Day 1: Historian Hysteria ---
 ----------------------------------
 
@@ -105,11 +81,3 @@ Once again consider your left and right lists. _What is their similarity score?_
 Your puzzle answer was `23082277`.
 
 Both parts of this puzzle are complete! They provide two gold stars: \*\*
-
-At this point, you should [return to your Advent calendar](/2024) and try another puzzle.
-
-If you still want to see it, you can [get your puzzle input](1/input).
-
-You can also \[Shareon [Bluesky](https://bsky.app/intent/compose?text=I%27ve+completed+%22Historian+Hysteria%22+%2D+Day+1+%2D+Advent+of+Code+2024+%23AdventOfCode+https%3A%2F%2Fadventofcode%2Ecom%2F2024%2Fday%2F1) [Twitter](https://twitter.com/intent/tweet?text=I%27ve+completed+%22Historian+Hysteria%22+%2D+Day+1+%2D+Advent+of+Code+2024&url=https%3A%2F%2Fadventofcode%2Ecom%2F2024%2Fday%2F1&related=ericwastl&hashtags=AdventOfCode) [Mastodon](javascript:void(0);)\] this puzzle.
-
-(function(i,s,o,g,r,a,m){i\['GoogleAnalyticsObject'\]=r;i\[r\]=i\[r\]||function(){ (i\[r\].q=i\[r\].q||\[\]).push(arguments)},i\[r\].l=1\*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)\[0\];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-69522494-1', 'auto'); ga('set', 'anonymizeIp', true); ga('send', 'pageview');
