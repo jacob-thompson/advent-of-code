@@ -1,6 +1,6 @@
 # Advent of Code Solutions
 
-![Advent of Code](https://img.shields.io/badge/Advent%20of%20Code-2023-blue?style=flat-square&logo=advent-of-code&logoColor=white)
+![Advent of Code](https://img.shields.io/badge/Advent%20of%20Code-blue?style=flat-square&logo=advent-of-code&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3.x-blue?style=flat-square&logo=python&logoColor=white)
 
 Welcome to my repository for [Advent of Code](https://adventofcode.com/) solutions! This project contains my Python solutions for the daily coding challenges of Advent of Code, an annual programming event held during December.
