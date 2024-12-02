@@ -44,7 +44,7 @@ cd advent-of-code
 
 ### Running Solutions
 
-Navigate to the folder for the specific year, then execute the `dayx.py` file:
+Navigate to the folder for the specific year, then execute the `dayXX.py` file:
 
 ```bash
 cd yearYYYY
