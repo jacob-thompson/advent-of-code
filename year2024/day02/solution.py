@@ -1,7 +1,7 @@
 def get_reports():
     reports = []
 
-    with open("day2.txt", "r") as file:
+    with open("input.txt", "r") as file:
         for line in file:
             sequence = line.split(" ")
             numbers = [int(item) for item in sequence]

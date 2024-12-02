@@ -2,7 +2,7 @@ def get_lists():
     left = []
     right = []
 
-    with open("day1.txt", "r") as file:
+    with open("input.txt", "r") as file:
         for line in file:
             numbers = line.split("   ")
             left.append(numbers[0])
