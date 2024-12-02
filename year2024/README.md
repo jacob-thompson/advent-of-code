@@ -1,6 +1,6 @@
 # Advent of Code - Year 2024
 
-![Advent of Code](https://img.shields.io/badge/Advent%20of%20Code-YYYY-blue?style=flat-square&logo=advent-of-code&logoColor=white)
+![Advent of Code](https://img.shields.io/badge/Advent%20of%20Code-2024-blue?style=flat-square&logo=advent-of-code&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3.x-blue?style=flat-square&logo=python&logoColor=white)
 
 Welcome to the solutions for the Advent of Code 2024 challenges! This directory contains my Python implementations for all puzzles from the Advent of Code event for the year 2024.
@@ -20,7 +20,7 @@ Welcome to the solutions for the Advent of Code 2024 challenges! This directory 
 └── ...
 ```
 
-Each folder corresponds to a specific day of Advent of Code YYYY. Inside each folder:
+Each folder corresponds to a specific day of Advent of Code 2024. Inside each folder:
 - `solution.py`: Python script containing the solution to the day's puzzle.
 - `input.txt`: The puzzle input for that day.
 - `README.md` : Notes or details about the problem and solution.
