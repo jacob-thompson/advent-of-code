@@ -2,7 +2,7 @@ def get_lists():
     left = []
     right = []
 
-    with open("input.txt", "r") as file:
+    with open("day1.txt", "r") as file:
         for line in file:
             numbers = line.split("   ")
             left.append(numbers[0])
@@ -32,3 +32,13 @@ def get_similarity_score(left_list, right_list):
         similarity += int(left_value) * appearances
 
     return similarity
+
+def main():
+    left, right = get_lists()
+    total = get_total_distance(left, right)
+    similarity = get_similarity_score(left, right)
+    print(total)
+    print(similarity)
+
+if __name__ == "__main__":
+    main()
