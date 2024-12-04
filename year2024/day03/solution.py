@@ -20,9 +20,6 @@ def get_mul_operands(line, index):
     else:
         index += 1
 
-    dos = [m.start() for m in finditer(DO, line)]
-    donts = [m.start() for m in finditer(DONT, line)]
-
     separated = False
     first_operand = ""
     second_operand = ""
@@ -38,7 +35,7 @@ def get_mul_operands(line, index):
         else:
             return None, None
 
-    return first_operand, second_operand
+    return int(first_operand), int(second_operand)
 
 def get_instructions(memory):
     instructions = []
@@ -60,9 +57,11 @@ def get_filtered_instructions(memory):
         dos = [m.start() for m in finditer(DO, line)]
 
         index = 0
-        for char in line:
-            if index in donts: do = False
-            elif index in dos: do = True
+        for _ in line:
+            if index in donts:
+                do = False
+            elif index in dos:
+                do = True
             elif index in muls and do:
                 operands = get_mul_operands(line, index)
                 instructions.append(operands)
@@ -76,7 +75,7 @@ def execute_instructions(instructions):
     for operand1, operand2 in instructions:
         if operand1 is None or operand2 is None:
             continue
-        value += int(operand1) * int(operand2)
+        value += operand1 * operand2
 
     return value
 
