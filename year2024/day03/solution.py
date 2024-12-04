@@ -82,11 +82,13 @@ def execute_instructions(instructions):
 
 def main():
     corrupted = get_corrupted_memory()
+
     unfiltered_instructions = get_instructions(corrupted)
     unfiltered_sum = execute_instructions(unfiltered_instructions)
+    print(unfiltered_sum)
+
     filtered_instructions = get_filtered_instructions(corrupted)
     filtered_sum = execute_instructions(filtered_instructions)
-    print(unfiltered_sum)
     print(filtered_sum)
 
 if __name__ == "__main__":
