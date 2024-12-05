@@ -27,7 +27,7 @@ Each folder corresponds to a specific day of Advent of Code 2024. Inside each fo
 
 ## Running the Solutions
 
-To run a solution, navigate to the appropriate day directory and execute the `solution.py` file:
+To run a solution, navigate to the appropriate day directory and execute the `solution.py` script:
 
 ```bash
 cd dayXX
@@ -36,7 +36,7 @@ python3 solution.py
 
 Replace `XX` with the day number (e.g., `01` for Day 1).
 
-### Running All of the Solutions
+### Running All Solutions
 
 To run all of the solutions, execute the `all.py` script:
 

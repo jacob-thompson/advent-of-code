@@ -44,7 +44,7 @@ cd advent-of-code
 
 ### Running Solutions
 
-Navigate to the folder for the specific year, then execute the `dayXX.py` file:
+Navigate to the folder for the specific year, then execute the `dayXX.py` script:
 
 ```bash
 cd yearYYYY
@@ -52,6 +52,15 @@ python3 dayXX.py
 ```
 
 Replace `YYYY` and `XX` with the desired year and day.
+
+#### Running All Solutions
+
+To run all of the solutions, navigate to the folder for the specific year, then execute the `all.py` script:
+
+```bash
+cd yearYYYY
+python3 all.py
+```
 
 ### Testing with Different Inputs
 
