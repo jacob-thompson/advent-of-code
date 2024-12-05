@@ -62,5 +62,3 @@ If you want to test a solution with a different input, replace the contents of t
 ## Notes
 
 Advent of Code puzzles are a fun way to practice problem-solving and algorithmic thinking. The solutions here are my own implementations and may not always be the most optimized but are functional and tailored to the given inputs.
-
----
