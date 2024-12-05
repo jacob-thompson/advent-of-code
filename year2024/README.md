@@ -36,6 +36,14 @@ python3 solution.py
 
 Replace `XX` with the day number (e.g., `01` for Day 1).
 
+### Running All of the Solutions
+
+To run all of the solutions, execute the `all.py` script:
+
+```bash
+python3 all.py
+```
+
 ## Testing with Different Inputs
 
 If you want to test a solution with a different input, replace the contents of the `input.txt` file in the corresponding day directory. Make sure the format of the input matches the expected structure for that puzzle.
