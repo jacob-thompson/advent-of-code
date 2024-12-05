@@ -73,3 +73,5 @@ You can replace the content of `dayXX.txt` with your own puzzle input to test th
 ## License
 
 This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---

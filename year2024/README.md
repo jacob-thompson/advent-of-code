@@ -46,7 +46,7 @@ python3 all.py
 
 ## Testing with Different Inputs
 
-If you want to test a solution with a different input, replace the contents of the `input.txt` file in the corresponding day directory. Make sure the format of the input matches the expected structure for that puzzle.
+If you want to test a solution with a different input, replace the contents of the `input.txt` file in the corresponding day directory.
 
 ## Progress
 
