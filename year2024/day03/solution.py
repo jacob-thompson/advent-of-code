@@ -5,7 +5,7 @@ DONT = "don't"
 DO = "do"
 
 def get_corrupted_memory():
-    memory = []
+    memory = list()
 
     with open("input.txt", "r") as file:
         for line in file:
@@ -21,8 +21,8 @@ def get_mul_operands(line, index):
         index += 1
 
     separated = False
-    first_operand = ""
-    second_operand = ""
+    first_operand = str()
+    second_operand = str()
     for char in line[index:]:
         if char.isdigit() and not separated:
             first_operand += char
@@ -49,15 +49,14 @@ def get_instructions(memory):
     return instructions
 
 def get_filtered_instructions(memory):
-    instructions = []
+    instructions = list()
     do = True
     for line in memory:
         muls = [m.start() for m in finditer(MULTIPLY, line)]
         donts = [m.start() for m in finditer(DONT, line)]
         dos = [m.start() for m in finditer(DO, line)]
 
-        index = 0
-        for _ in line:
+        for index, _ in enumerate(line):
             if index in donts:
                 do = False
             elif index in dos:
@@ -65,8 +64,6 @@ def get_filtered_instructions(memory):
             elif index in muls and do:
                 operands = get_mul_operands(line, index)
                 instructions.append(operands)
-
-            index += 1
 
     return instructions
 

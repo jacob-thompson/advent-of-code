@@ -1,12 +1,12 @@
 def get_lists():
-    left = []
-    right = []
+    left = list()
+    right = list()
 
     with open("input.txt", "r") as file:
         for line in file:
             numbers = line.split("   ")
             left.append(numbers[0])
-            right.append(numbers[1][:-1])
+            right.append(numbers[1][:-1]) # must trim newlines from right
 
     left.sort()
     right.sort()

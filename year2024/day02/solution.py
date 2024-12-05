@@ -1,5 +1,5 @@
 def get_reports():
-    reports = []
+    reports = list()
 
     with open("input.txt", "r") as file:
         for line in file:
@@ -16,16 +16,12 @@ def decreasing(report):
     return all(x > y and x - y <= 3 for x, y in zip(report, report[1:]))
 
 def fixable(report):
-    index = 0
-
-    for number in report:
+    for index, number in enumerate(report):
         fixed = report[:]
         fixed.pop(index)
 
         if increasing(fixed) or decreasing(fixed):
             return True
-
-        index += 1
 
     return False
 
