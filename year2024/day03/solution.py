@@ -1,91 +1,27 @@
-from re import finditer
+from re import findall
 
-MULTIPLY = "mul"
-DONT = "don't"
-DO = "do"
+DONT = "don't()"
+DO = "do()"
 
-def get_corrupted_memory():
-    memory = list()
+with open("input.txt", "r") as file:
+    data = file.read()
 
-    with open("input.txt", "r") as file:
-        for line in file:
-            memory.append(line)
-
-    return memory
-
-def get_mul_operands(line, index):
-    index += len(MULTIPLY)
-    if line[index] != "(":
-        return None, None
-    else:
-        index += 1
-
-    separated = False
-    first_operand = str()
-    second_operand = str()
-    for char in line[index:]:
-        if char.isdigit() and not separated:
-            first_operand += char
-        elif char == "," and first_operand != "":
-            separated = True
-        elif char.isdigit() and separated:
-            second_operand += char
-        elif char == ")" and second_operand != "":
-            break
-        else:
-            return None, None
-
-    return int(first_operand), int(second_operand)
-
-def get_instructions(memory):
-    instructions = []
-    for line in memory:
-        muls = [m.start() for m in finditer(MULTIPLY, line)]
-
-        for index in muls:
-            operands = get_mul_operands(line, index)
-            instructions.append(operands)
-
-    return instructions
-
-def get_filtered_instructions(memory):
-    instructions = list()
+def compute(part1):
+    result = 0
     do = True
-    for line in memory:
-        muls = [m.start() for m in finditer(MULTIPLY, line)]
-        donts = [m.start() for m in finditer(DONT, line)]
-        dos = [m.start() for m in finditer(DO, line)]
+    for instruction, op1, op2 in findall("(mul\((\d+),(\d+)\)|do\(\)|don't\(\))", data):
+        if instruction == DONT:
+            do = False
+        elif instruction == DO:
+            do = True
+        else:
+            if do or part1:
+                result += int(op1) * int(op2)
 
-        for index, _ in enumerate(line):
-            if index in donts:
-                do = False
-            elif index in dos:
-                do = True
-            elif index in muls and do:
-                operands = get_mul_operands(line, index)
-                instructions.append(operands)
+    return result
 
-    return instructions
+# part 1
+print(compute(True))
 
-def execute_instructions(instructions):
-    value = 0
-    for operand1, operand2 in instructions:
-        if operand1 is None or operand2 is None:
-            continue
-        value += operand1 * operand2
-
-    return value
-
-def main():
-    corrupted = get_corrupted_memory()
-
-    unfiltered_instructions = get_instructions(corrupted)
-    unfiltered_sum = execute_instructions(unfiltered_instructions)
-    print(unfiltered_sum)
-
-    filtered_instructions = get_filtered_instructions(corrupted)
-    filtered_sum = execute_instructions(filtered_instructions)
-    print(filtered_sum)
-
-if __name__ == "__main__":
-    main()
+# part 2
+print(compute(False))

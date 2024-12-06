@@ -1,47 +1,24 @@
-def get_reports():
-    reports = list()
+from itertools import pairwise
 
-    with open("input.txt", "r") as file:
-        for line in file:
-            sequence = line.split(" ")
-            numbers = [int(item) for item in sequence]
-            reports.append(numbers)
+def safe_check(report):
+    return all(
+        1 <= abs(a - b) <= 3
+        for a, b in pairwise(report)) and (
+            report == sorted(report) or report == sorted(report)[::-1])
 
-    return reports
+def dampened_safe_check(report):
+    return any(
+        safe_check(report[:i] + report[i + 1:])
+        for i in range(len(report))
+    )
 
-def increasing(report):
-    return all(x < y and y - x <= 3 for x, y in zip(report, report[1:]))
+with open("input.txt", "r") as file:
+    data = file.read().strip().splitlines()
 
-def decreasing(report):
-    return all(x > y and x - y <= 3 for x, y in zip(report, report[1:]))
+reports = [list(map(int, entry.split())) for entry in data]
 
-def fixable(report):
-    for index, number in enumerate(report):
-        fixed = report[:]
-        fixed.pop(index)
+# part 1
+print(sum(safe_check(report) for report in reports))
 
-        if increasing(fixed) or decreasing(fixed):
-            return True
-
-    return False
-
-def get_counter(reports, try_fixing = False):
-    counter = 0
-
-    for report in reports:
-        if increasing(report) or decreasing(report):
-            counter += 1
-        elif try_fixing and fixable(report):
-            counter += 1
-
-    return counter
-
-def main():
-    reports = get_reports()
-    counter = get_counter(reports)
-    dampened = get_counter(reports, True)
-    print(counter)
-    print(dampened)
-
-if __name__ == "__main__":
-    main()
+# part 2
+print(sum(dampened_safe_check(report) for report in reports))
