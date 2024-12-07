@@ -58,7 +58,6 @@ If you want to test a solution with a different input, replace the contents of t
 | 4   | ✅ Completed  |
 | 5   | ✅ Completed  |
 | 6   | ❌ Part 1 Only|
-| ... | ...           |
 
 ## Notes
 
