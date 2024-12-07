@@ -57,7 +57,7 @@ If you want to test a solution with a different input, replace the contents of t
 | 3   | ✅ Completed  |
 | 4   | ✅ Completed  |
 | 5   | ✅ Completed  |
-| 6   | 🚧 In Progress|
+| 6   | ❌ Part 1 Only|
 | ... | ...           |
 
 ## Notes
